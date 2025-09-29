@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: agro-feedback-kafka-cluster
+  namespace: kafka
+spec:
+  project: Kafka-cluster
+  source:
+    repoURL: https://github.com/bhatvinay7/feedback.git
+    targetRevision: staging
+    path:  Helm/chart.prod/kafka-cluster
+    directory:
+      recurse: true    
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kafka
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  createNamespace: true    

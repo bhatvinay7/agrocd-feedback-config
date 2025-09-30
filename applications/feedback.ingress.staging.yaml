@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/bhatvinay7/feedback.git
     targetRevision: staging
-    path:  Helm/chart.staging/services/ingress-controller
+    path:  Helm/chart.staging/ingress-controller
     directory:
       recurse: true    
   destination:

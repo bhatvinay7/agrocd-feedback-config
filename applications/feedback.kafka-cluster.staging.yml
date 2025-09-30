@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/bhatvinay7/feedback.git
     targetRevision: staging
-    path:  Helm/chart.prod/kafka-cluster
+    path:  Helm/chart.staging/kafka-cluster
     directory:
       recurse: true    
   destination:

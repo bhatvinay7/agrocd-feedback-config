@@ -4,7 +4,7 @@ metadata:
   name: cert-manager
   namespace: feedback
 spec:
-  project: Kafka-cluster
+  project: feedback-services
   source:
     repoURL: https://github.com/bhatvinay7/feedback.git
     targetRevision: staging

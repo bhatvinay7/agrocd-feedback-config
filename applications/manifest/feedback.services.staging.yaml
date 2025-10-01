@@ -9,11 +9,14 @@ spec:
     repoURL: https://github.com/bhatvinay7/feedback.git 
     targetRevision: staging
     path: Helm/chart.staging/services
+    helm:
+    valueFiles:
+      - values.staging.yml
     directory:
       recurse: true    
   destination:
-    server: https://kubernetes.default.svc
-    namespace: feedback-services
+    - server: https://kubernetes.default.svc
+      namespace: feedback-services
   syncPolicy:
     automated:
       prune: true

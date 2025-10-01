@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: feedback-services
+  name: kafka-services
   namespace: feedback
 spec:
   description: Project for Feedback microservices

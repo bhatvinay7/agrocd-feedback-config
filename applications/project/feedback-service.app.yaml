@@ -8,8 +8,8 @@ spec:
   sourceRepos:
     - https://github.com/bhatvinay7/feedback.git
   destinations:
+    - server: https://kubernetes.default.svc
       namespace: feedback-services
-      server: https://kubernetes.default.svc
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'

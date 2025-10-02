@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: services.staging
+  name: reach-ws-server
   namespace: feedback
 spec:
-  project: feedback-services
+  project: reach-ws-server
   source:
     repoURL: https://github.com/bhatvinay7/feedback.git 
     targetRevision: staging
-    path: Helm/chart.staging/services
+    path: Helm/chart.staging/services/reach-ws-server
     helm:
     valueFiles:
       - values.staging.yml

@@ -4,7 +4,7 @@ metadata:
   name: kafka-cluster
   namespace: feedback
 spec:
-  project: kafka-services
+  project: kafka-cluster
   source:
     repoURL: https://github.com/bhatvinay7/feedback.git
     targetRevision: staging

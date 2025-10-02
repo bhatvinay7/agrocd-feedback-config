@@ -1,14 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ingress
+  name: reach-frontend
   namespace: feedback
 spec:
-  project: ingress
+  project: reach-frontend
   source:
-    repoURL: https://github.com/bhatvinay7/feedback.git
+    repoURL: https://github.com/bhatvinay7/feedback.git 
     targetRevision: staging
-    path:  Helm/chart.staging/ingress-controller
+    path: Helm/chart.staging/services/reach-frontend
+    helm:
+    valueFiles:
+      - values.staging.yml
     directory:
       recurse: true    
   destination:
@@ -19,4 +22,5 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true      
+      - CreateNamespace=true   
+  

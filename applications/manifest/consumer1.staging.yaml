@@ -1,14 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager
+  name: consumer1
   namespace: feedback
 spec:
-  project: feedback-services
+  project: consumer1
   source:
-    repoURL: https://github.com/bhatvinay7/feedback.git
+    repoURL: https://github.com/bhatvinay7/feedback.git 
     targetRevision: staging
-    path:  Helm/chart.staging/certmanager
+    path: Helm/chart.staging/services/reach-consumer1
+    helm:
+    valueFiles:
+      - values.staging.yml
     directory:
       recurse: true    
   destination:
@@ -19,4 +22,5 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true      
+      - CreateNamespace=true   
+  

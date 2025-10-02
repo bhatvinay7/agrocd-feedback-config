@@ -19,6 +19,4 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
-      - CreateNamespace=true
-  dependsOn:
-    - sealed-secrets        
+      - CreateNamespace=true       

@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: consumer2
-  namespace: feedback
+  namespace: argocd
 spec:
   project: consumer2
   source:

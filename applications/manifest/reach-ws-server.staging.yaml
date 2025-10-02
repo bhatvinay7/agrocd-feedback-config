@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: reach-ws-server
-  namespace: feedback
+  namespace: argocd
 spec:
   project: reach-ws-server
   source:

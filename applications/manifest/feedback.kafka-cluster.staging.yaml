@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kafka-cluster
-  namespace: feedback
+  namespace: argocd
 spec:
   project: kafka-cluster
   source:

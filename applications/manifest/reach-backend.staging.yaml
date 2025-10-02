@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: reach-backend
-  namespace: feedback
+  namespace: argocd
 spec:
   project: reach-backend
   source:

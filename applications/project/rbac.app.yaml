@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: rbac
-  namespace: feedback
+  namespace: argocd
 spec:
   description: Project for Feedback microservices
   sourceRepos:

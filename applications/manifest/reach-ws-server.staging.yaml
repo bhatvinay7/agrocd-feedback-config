@@ -11,9 +11,7 @@ spec:
     path: Helm/chart.staging/services/reach-ws-server
     helm:
       valueFiles:
-        - values.staging.yml
-    directory:
-      recurse: true    
+        - values.staging.yml 
   destination:
       server: https://kubernetes.default.svc
       namespace: feedback-services

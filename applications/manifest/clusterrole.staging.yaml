@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rbac
-  namespace: argocd
+  namespace: feedback
 spec:
   project: rbac
   source:
@@ -13,7 +13,7 @@ spec:
       recurse: true    
   destination:
       server: https://kubernetes.default.svc
-      namespace: argocd
+      namespace: feedback
   syncPolicy:
     automated:
       prune: true

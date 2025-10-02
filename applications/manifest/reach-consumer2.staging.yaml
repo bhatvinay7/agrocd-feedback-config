@@ -10,8 +10,8 @@ spec:
     targetRevision: staging
     path: Helm/chart.staging/services/reach-consumer2
     helm:
-    valueFiles:
-      - values.staging.yml
+      valueFiles:
+        - values.staging.yml
     directory:
       recurse: true    
   destination:

@@ -15,8 +15,8 @@ spec:
       server: https://kubernetes.default.svc
       namespace: kafka
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
     syncOptions:
-      - CreateNamespace=true    
+      - CreateNamespace=true
+  dependsOn:
+    - sealed-secrets        

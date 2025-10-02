@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: rbac
+  namespace: feedback
+spec:
+  description: Project for Feedback microservices
+  sourceRepos:
+    - https://github.com/bhatvinay7/feedback.git
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: argocd
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  # roles:
+  #   - name: dev
+  #     description: Developers with full access
+  #     policies:
+  #       - p, proj:kafka-services:applications, get, */*, allow
+  #       - p, proj:kafka-services:applications, sync, */*, allow
+  #       - p, proj:kafka-services:applications, delete, */*, allow
+  #       - p, proj:kafka-services:applications, create, */*, allow
+  #       - p, proj:kafka-services:applications, update, */*, allow
+  #     groups:
+  #       - dev-team 
